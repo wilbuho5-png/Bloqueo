@@ -13,4 +13,9 @@
     <PackageReference Include="System.Data.SqlClient" Version="4.8.6" />
   </ItemGroup>
 
+  <ItemGroup>
+    <!-- Excluir el proyecto de tests: tiene su propio csproj en tests/ -->
+    <Compile Remove="tests/**/*.cs" />
+  </ItemGroup>
+
 </Project>
