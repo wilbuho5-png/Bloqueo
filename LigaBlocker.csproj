@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <AssemblyName>LigaBlocker</AssemblyName>
+    <RootNamespace>Betradar.Blocking</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.6" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Excluir el proyecto de tests: tiene su propio csproj en tests/ -->
+    <Compile Remove="tests/**/*.cs" />
+    <!-- Excluir el proyecto console PruebaConsole: tiene su propio csproj (evita
+         duplicar el atributo TargetFrameworkAttribute al compilar) -->
+    <Compile Remove="PruebaConsole/**/*.cs" />
+  </ItemGroup>
+
+</Project>

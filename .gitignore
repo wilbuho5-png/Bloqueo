@@ -1,0 +1,6 @@
+bin/
+obj/
+*.dll
+*.pdb
+tests/bin/
+tests/obj/
