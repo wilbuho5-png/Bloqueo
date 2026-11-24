@@ -16,6 +16,9 @@
   <ItemGroup>
     <!-- Excluir el proyecto de tests: tiene su propio csproj en tests/ -->
     <Compile Remove="tests/**/*.cs" />
+    <!-- Excluir el proyecto console PruebaConsole: tiene su propio csproj (evita
+         duplicar el atributo TargetFrameworkAttribute al compilar) -->
+    <Compile Remove="PruebaConsole/**/*.cs" />
   </ItemGroup>
 
 </Project>
